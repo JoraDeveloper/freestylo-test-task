@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body, .app, #__next {
+  height: 100%;
+}
+
+.app {
+  background-color: rgba(100, 65, 165, .2);
+  &__main {
+
+  }
+}
+
+.main {
+  
+}
