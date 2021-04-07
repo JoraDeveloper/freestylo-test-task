@@ -6,7 +6,7 @@
 В корневом каталоге проекта
 ```sh
 npm install 
-npm run buld
+npm run build
 npm run start
 ```
 ## Используемые технологии:
