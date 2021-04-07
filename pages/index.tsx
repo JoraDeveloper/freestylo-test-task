@@ -1,19 +1,25 @@
+import React from 'react';
+import App from "../components/App";
 import MainContainer from "../components/MainContainer";
-import Head from "next/head";
+import axios from "axios";
 
-const  App = () => {
+export const axiosInstance = axios.create();
+
+const Index = () => {
     return (
-        <>
-            <Head>
-                <title>freestylo-test-task</title>
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-            </Head>
-            <div className='app'>
-                <MainContainer />
-            </div>
-        </>
+        <App axiosInstance={axiosInstance}>
+           <MainContainer axiosInstance={axiosInstance} />
+        </App>
     )
 }
 
-export default App;
+export default Index;
+
+/*
+export const getStaticProps: GetStaticProps = async (context) => {
+    axiosInstance.defaults.headers['Client-ID'] = 'ku0q19f8kefr5zpabtw076oyx4kyb6';
+    axiosInstance.defaults.headers['Accept'] = 'application/vnd.twitchtv.v5+json';
+    return {
+        props: {axiosInstance}
+    }
+}*/
